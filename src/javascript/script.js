@@ -7,7 +7,7 @@ function toggleMenu() {
   // Verifica o estado atual do menu
   if (menuList.style.maxHeight === "0px") {
     // Abre o menu
-    menuList.style.maxHeight = "300px"; // Altura do menu quando aberto
+    menuList.style.maxHeight = "350px"; // Altura do menu quando aberto
     content.classList.add("open-menu"); // Empurra o conteúdo para baixo
   } else {
     // Fecha o menu
