@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+  .texto-escondido {
+    opacity: 0; /* Esconde o texto inicialmente */
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Faz o efeito de fade-in */
+  }
+  .card {
+    width: 75%;
+    height: 400px;
+  }
+  .card:hover {
+    transform: scale(1.03);
+    transition: 0.5s;
+  }
+  .card:hover .texto-escondido {
+    opacity: 1; /* Torna o texto visível */
+    visibility: visible;
+  }
+  .card:hover h2 {
+    text-align: center;
+    transition: 0.3s;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) /*pc*/ {
+  #emerson {
+    height: 100vh;
+    margin: 0px;
+  }
+  #emerson > p {
+    height: 100px;
+    width: 90vw;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #emerson {
+    height: 100vh;
+    margin: 0px;
+  }
+  #emerson > p {
+    height: 90vh;
+    width: 90vw;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
