@@ -24,18 +24,23 @@ body {
   text-shadow: 1px 1px 1px black;
 }
 
+h1,
+h2 {
+  font-size: 2em;
+}
+
 header {
   background-color: var(--preto-profundo);
   color: var(--branco-puro);
 }
 
-header > .logo > h1 {
+header .logo h1 {
   text-align: center;
   margin: auto;
-  padding: 2rem 0px;
+  padding: 2rem 0;
 }
 
-header > nav {
+header nav {
   padding: 10px 30px;
   display: flex;
   align-items: center;
@@ -43,7 +48,7 @@ header > nav {
   color: var(--branco-puro);
   position: relative;
   height: 70px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.514);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.514);
 }
 
 nav ul {
@@ -54,7 +59,7 @@ nav ul {
 }
 
 nav ul li {
-  list-style-type: none;
+  list-style: none;
 }
 
 nav ul li a {
@@ -64,11 +69,13 @@ nav ul li a {
 
 nav ul li a:hover {
   background-color: var(--cinza-medio);
-  transition: 0.3s ease;
   padding: 10px;
   border-radius: 8px;
+  transition: 0.5s ease;
 }
-
+p.quem-sou-eu-texto {
+  padding-bottom: 20px;
+}
 .menu-icon {
   display: none;
 }
@@ -87,8 +94,6 @@ a {
   text-decoration: none;
   color: var(--preto-profundo);
   display: inline-block;
-  width: auto;
-  height: auto;
 }
 
 section {
@@ -97,14 +102,13 @@ section {
 
 #moldura {
   border-radius: 50%;
-  width: auto;
 }
 
 .foto-emerson {
   background-image: url(https://i.pinimg.com/736x/59/af/9c/59af9cd100daf9aa154cc753dd58316d.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   margin: auto;
   width: 200px;
   height: 200px;
@@ -113,32 +117,43 @@ section {
   border: solid 5px rgb(150, 149, 150);
   box-shadow: 5px 4px 5px rgba(0, 0, 0, 0.511);
 }
+
 .foto-emerson:hover {
-  transform: scale(1.03);
+  transform: scale(1.1);
   transition: 0.5s;
 }
 
-#emerson {
-  background-color: var(--cinza-medio);
-  color: var(--branco-puro);
-  margin-bottom: 80px;
-  padding: 16vh 0vh;
-  cursor: default;
+.principal {
+  padding: 0;
+  margin: 0;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.633), transparent);
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.672);
+  background-color: var(--cinza-medio);
+  padding-bottom: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.672);
 }
 
-#emerson > h2 {
+#emerson {
+  padding: 0;
+  margin: 0;
+  color: var(--branco-puro);
+  cursor: default;
+  line-height: 1.5;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.672);
+}
+
+#emerson h2 {
   text-align: center;
   margin: 0 0 30px;
 }
 
-#emerson > img {
+#emerson img {
   margin: auto;
 }
+
 .cards {
-  margin: 50px 0px;
+  margin: 50px 0;
 }
+
 .card {
   background-image: url(https://i.pinimg.com/736x/3e/81/e4/3e81e41176fe5a7f10ade8f10f85ffa6.jpg);
   background-repeat: no-repeat;
@@ -152,11 +167,11 @@ section {
   margin: 20px auto;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0px 0px 10px black;
+  box-shadow: 0 0 10px black;
 }
 
-#emerson > p {
-  margin: 30px 0 10px;
+#emerson .quem-sou-eu-texto {
+  height: 100%;
 }
 
 .fade {
@@ -172,16 +187,18 @@ section {
 .content {
   position: relative;
   z-index: 2;
+  width: 50%;
+  color: #fff;
 }
 
-.content > h2,
-.content > p {
-  width: 50%;
-  color: var(--branco-puro);
-  text-align: justify;
-  padding: 5px;
-  margin: 0;
+.content h2 {
+  text-shadow: 1px 1px 1px var(--preto-profundo);
 }
+
+.content p {
+  text-indent: 20px;
+}
+
 .footer {
   background-color: #333;
   color: #fff;
@@ -254,6 +271,40 @@ section {
 }
 
 @media (max-width: 768px) {
+  header nav {
+    padding: 10px;
+  }
+
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    text-align: center;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-icon i {
+    font-size: 30px;
+  }
+
+  header nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    padding: 15px 0;
+    margin: 0;
+  }
+
+  .principal {
+    padding: 0;
+  }
+
   .footer .container {
     flex-direction: column;
     align-items: center;
