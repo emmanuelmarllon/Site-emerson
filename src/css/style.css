@@ -32,7 +32,7 @@ header {
 header > .logo > h1 {
   text-align: center;
   margin: auto;
-  padding-top: 2rem;
+  padding: 2rem 0px;
 }
 
 header > nav {
@@ -101,7 +101,10 @@ section {
 }
 
 .foto-emerson {
-  background: black;
+  background-image: url(https://i.pinimg.com/736x/59/af/9c/59af9cd100daf9aa154cc753dd58316d.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   margin: auto;
   width: 200px;
   height: 200px;
@@ -133,9 +136,11 @@ section {
 #emerson > img {
   margin: auto;
 }
-
+.cards {
+  margin: 50px 0px;
+}
 .card {
-  background-color: darkseagreen;
+  background-image: url(https://i.pinimg.com/736x/3e/81/e4/3e81e41176fe5a7f10ade8f10f85ffa6.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -174,7 +179,7 @@ section {
   width: 50%;
   color: var(--branco-puro);
   text-align: justify;
-  padding: 0;
+  padding: 5px;
   margin: 0;
 }
 .footer {

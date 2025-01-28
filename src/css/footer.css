@@ -1,5 +1,22 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --preto-profundo: #0d0d0d;
+  --cinza-escuro: #2c2c2c;
+  --cinza-medio: #666666;
+  --cinza-claro: #b3b3b3;
+  --cinza-muito-claro: #e6e6e6;
+  --branco-puro: #ffffff;
+}
 .footer {
-  background-color: #333;
+  background-color: #000000;
   color: #fff;
   padding: 20px 10px;
   text-shadow: 1px 1px black;
